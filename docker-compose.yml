@@ -16,11 +16,9 @@ services:
     environment:
       MYSQL_DATABASE: freshmail
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_RANDOM_ROOT_PASSWORD: "no"
-      MYSQL_ROOT_PASSWORD: ""
+      # MYSQL_RANDOM_ROOT_PASSWORD: "no"
+      # MYSQL_ROOT_PASSWORD: ""
     restart: always
-    # healthcheck:
-    #   test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
     volumes:
       - maildb_data:/var/lib/mysql
     networks:
