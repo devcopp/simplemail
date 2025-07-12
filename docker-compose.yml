@@ -1,12 +1,13 @@
 services:
-  # web:
-  #   image: nginx:latest
-  #   ports:
-  #     - "80:80"
-  #   volumes:
-  #     - ./html:/usr/share/nginx/html
-  #   networks:
-  #     - webnet
+  web:
+    container_name: mail-app
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - webnet
 
   mail_db:
     container_name: mail_db
